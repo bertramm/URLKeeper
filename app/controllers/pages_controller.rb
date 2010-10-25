@@ -20,7 +20,7 @@ class PagesController < ApplicationController
        #user = CGI::escape("Test User")
        #desc = CGI::escape("Test desc")
 
-       http = Net::HTTP.new('googleURL',443)
+       http = Net::HTTP.new(googleURL,443)
        http.use_ssl = true
 
        
