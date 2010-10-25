@@ -6,6 +6,10 @@ class PagesController < ApplicationController
      url = params['url'].nil?  ? "" : CGI::escape(params['url'])
      user = params['user'].nil?  ? "" : CGI::escape(params['user'])
      desc = params['desc'].nil?  ? "" : CGI::escape(params['desc'])
+     
+     if url == "pure-ocean-97.heroku.com"
+       return true
+     end
      #url = CGI::escape("Test URL")
      #user = CGI::escape("Test User")
      #desc = CGI::escape("Test desc")
