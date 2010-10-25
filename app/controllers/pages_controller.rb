@@ -7,9 +7,9 @@ class PagesController < ApplicationController
      user = params['user'].nil?  ? "" : CGI::escape(params['user'])
      desc = params['desc'].nil?  ? "" : CGI::escape(params['desc'])
      
-     if url == "http://pure-ocean-97.heroku.com/"
-       return true
-     end
+     if url != "http://pure-ocean-97.heroku.com/"
+       
+     
      #url = CGI::escape("Test URL")
      #user = CGI::escape("Test User")
      #desc = CGI::escape("Test desc")
@@ -27,10 +27,12 @@ class PagesController < ApplicationController
 
 
      # Output on the screen -> we should get either a 302 redirect (after a successful login) or an error page
-     puts 'Code = ' + resp.code
-     puts 'Message = ' + resp.message
-     resp.each {|key, val| puts key + ' = ' + val}
-     puts data
+     #puts 'Code = ' + resp.code
+     #puts 'Message = ' + resp.message
+     #resp.each {|key, val| puts key + ' = ' + val}
+     #puts data
+
+     end
   end
 
 end
